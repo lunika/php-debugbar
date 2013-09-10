@@ -347,7 +347,7 @@ $debugbar-&gt;addCollector(new DebugBar\Bridge\SwiftMailer\SwiftMailCollector($m
 You need to wrap your <code>Twig_Environment</code> object into a <code>DebugBar\Bridge\Twig\TraceableTwigEnvironment</code> object.</p>
 <pre><code>$loader = new Twig_Loader_Filesystem(&#39;.&#39;);
 $env = new DebugBar\Bridge\Twig\TraceableTwigEnvironment(new Twig_Environment($loader));
-$debugbar-&gt;addCollector(new DebugBar\Bridge\Twig\TwigDataCollector($env));</code></pre>
+$debugbar-&gt;addCollector(new DebugBar\Bridge\Twig\TwigCollector($env));</code></pre>
 <p>You can provide a <code>DebugBar\DataCollector\TimeDataCollector</code> as the second argument of
 <code>TraceableTwigEnvironment</code> so render operation can be measured.</p>
 
